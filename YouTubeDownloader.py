@@ -6,7 +6,7 @@ from tkinter.filedialog import askopenfilename
 # Main function to download a video from the provided <link>
 def Download(link):
     print(f'\nDownloading "{link}"')
-    try: # Using exception handling to avoid runtime errلهفors such as incorrect link
+    try: # Using exception handling to avoid runtime errors such as incorrect link
         youtubeObject = YouTube(link)
         youtubeObject = youtubeObject.streams.get_highest_resolution()
         youtubeObject.download()
